@@ -1,27 +1,32 @@
 from pages.base_page import BasePage
-
+import time
 
 class Dashboard(BasePage):
-    button_xpath = "//*[@id='login']"
+    expected_title = 'Scouts panel'
+    dashboard_url = ('https://scouts-test.futbolkolektyw.pl/')
+    scounts_panel_header_xpath = "//h6[text()='Scouts Panel']"
+    header_of_box = 'Scouts Panel'
+    main_page_link_xpath = "//span[text()='Main page']"
+    players_link_xpath = "//span[text()='Players']"
+    polski_link_xpath = "//span[text()='Polski']"
+    sign_out_link_xpath = "//span[text()='Sign out']"
+    players_count_section_xpath = "//div[text()='Players count']"
+    matches_count_section_xpath = "//div[text()='Matches count']"
+    reports_count_section_xpath = "//div[text()='Reports count']"
+    events_count_section_xpath = "//div[text()='Events count']"
+    shortcuts_section_xpath = "//h2[text()='Shortcuts']"
+    add_player_link_xpath = "//span[text()='Add player']"
+    logo_xpath = "//div[@title='Logo Scouts Panel']"
 
-    the_email_field_xpath = "//input[@name='email']"
-    the_name_field_xpath = "//input[@name='name']"
-    the_surname_field_xpath = "//input[@name='surname']"
-    the_phone_field_xpath = "//input[@name='phone']"
-    the_weight_field_xpath = "//input[@name='weight']"
-    the_height_field_xpath = "//input[@name='height']"
-    the_age_field_xpath = "//input[@name='age']"
-    the_leg_field_xpath = "//div[@id='mui-component-select-leg']"
-    the_club_field_xpath = "//input[@name='club']"
-    the_level_field_xpath = "//input[@name='level']"
-    the_mainPosition_field_xpath = "//input[@name='mainPosition']"
-    the_secondPosition_field_xpath = "//input[@name='secondPosition']"
-    the_district_field_xpath = "//div[@id='mui-component-select-district']"
-    the_achievements_field_xpath = "//input[@name='achievements']"
-    the_addLanguage_button_xpath = "//span[contains(text(),'Add language')]"
-    the_webLaczy_field_xpath = "//input[@name='webLaczy']"
-    the_90minut_field_xpath = "//input[@name='web90']"
-    the_facebook_field_xpath = "//label[contains(text(),'Facebook')]/following::div[1]"
-    the_addLinkToYoutube_button_xpath = "//span[contains(text(),'Add link to Youtube')]"
-    the_submit_button_xpath = "//span[contains(text(),'Submit')]"
-    the_clear_button_xpath = "//span[contains(text(),'Clear')]"
+    def check_title_of_header(self):
+        self.assert_element_text(self.driver, self.scounts_panel_header_xpath, self.header_of_box)
+
+    def title_of_page(self):
+        time.sleep(5)
+        assert self.get_page_title(self.dashboard_url) == self.expected_title
+    def click_on_the_add_player_link(self):
+        self.click_on_the_element(self.add_player_link_xpath)
+
+
+
+
