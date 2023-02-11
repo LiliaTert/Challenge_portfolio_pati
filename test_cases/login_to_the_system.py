@@ -2,6 +2,8 @@ import os
 import time
 import unittest
 from selenium import webdriver
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 from pages.dashboard import Dashboard
 from pages.login_page import LoginPage
@@ -30,7 +32,8 @@ class TestLoginPage(unittest.TestCase):
         dashboard_page = Dashboard(self.driver)
         dashboard_page.title_of_page()
         dashboard_page.click_on_the_add_player_link()
-        time.sleep(5)
+        #time.sleep(5)
+        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(('xpath', add_player_link_xpath)))
 
     @classmethod
     def tearDown(self):
