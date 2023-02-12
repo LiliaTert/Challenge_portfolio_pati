@@ -28,6 +28,11 @@ class Dashboard(BasePage):
     def click_on_the_add_player_link(self):
         self.click_on_the_element(self.add_player_link_xpath)
 
+    def click_on_the_sign_out_link(self):
+        self.click_on_the_element(self.sign_out_link_xpath)
+
+
+
 
 
 

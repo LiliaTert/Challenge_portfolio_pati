@@ -3,6 +3,7 @@ login_field_xpath = "//*[@id='login']"
 password_field_xpath = "//*[@id='password']"
 sign_in_button_xpath = "//span[contains(text(),'Sign in')]"
 title_of_box_xpath = "//*[text()='Scouts Panel']"
+message_invalid_data_xpath = "Identifier or password invalid."
 
 # AddPlayerPage_xpath:
 expected_title = 'Add player'

@@ -9,6 +9,7 @@ class LoginPage(BasePage):
     expected_title = ('Scouts panel - sign in')
     title_of_box_xpath = "//*[text()='Scouts Panel']"
     header_of_box = 'Scouts Panel'
+    message_invalid_data = "Identifier or password invalid."
 
     def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
