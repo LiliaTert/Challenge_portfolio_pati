@@ -2,8 +2,10 @@ import unittest
 
 from unittest.loader import makeSuite
 
-from test_cases.login_to_the_system import TestLoginPage
 from test_cases.framework import Test
+from test_cases.login_to_the_system import TestLoginPage
+
+
 
 def full_suite():
    test_suite = unittest.TestSuite()

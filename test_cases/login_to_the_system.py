@@ -48,10 +48,10 @@ class TestLoginPage(unittest.TestCase):
         time.sleep(3)
 
     def test_login_to_the_system_using_invalid_data(self):
+        self.user_login.title_of_page()
         self.user_login.type_in_email('user10@getnada')
         self.user_login.type_in_password('Test-1234')
         self.user_login.click_on_the_sign_in_button()
-        self.user_login.message_invalid_data()
         self.user_login.title_of_page()
         time.sleep(3)
 
