@@ -5,7 +5,7 @@ class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
     sign_in_button_xpath = "//span[contains(text(),'Sign in')]"
-    login_url = ('https://scouts-test.futbolkolektyw.pl/en')
+    login_url = ('https://scouts.futbolkolektyw.pl/en/')
     expected_title = ('Scouts panel - sign in')
     title_of_box_xpath = "//*[text()='Scouts Panel']"
     header_of_box = 'Scouts Panel'

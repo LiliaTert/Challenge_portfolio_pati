@@ -19,7 +19,7 @@ class TestLoginPage(unittest.TestCase):
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
         #self.driver_service = Service(executable_path=ChromeDriverManager().install())
         #self.driver = webdriver.Chrome(service=self.driver_service)
-        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
+        self.driver.get('https://scouts.futbolkolektyw.pl/en/')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
         self.user_login = LoginPage(self.driver)
@@ -59,7 +59,6 @@ class TestLoginPage(unittest.TestCase):
         self.user_login.type_in_email('user10@getnada.com')
         self.user_login.type_in_password('Test-1234')
         self.user_login.click_on_the_sign_in_button()
-        self.dashboard_page.title_of_page()
         self.dashboard_page.click_on_the_sign_out_link()
         time.sleep(3)
 

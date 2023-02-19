@@ -7,7 +7,7 @@ message_invalid_data_xpath = "Identifier or password invalid."
 
 # AddPlayerPage_xpath:
 expected_title = 'Add player'
-add_player_url = ('https://scouts-test.futbolkolektyw.pl/en/players/add')
+add_player_url = ('https://scouts.futbolkolektyw.pl/en/')
 add_player_header_xpath = "//title[text()='Add player']"
 header_of_box = 'Add player'
 email_field_xpath = "//input[@name='email']"

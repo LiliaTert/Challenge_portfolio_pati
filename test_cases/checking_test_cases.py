@@ -10,7 +10,7 @@ from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 # Test_case_1.1. User authorization on the site using valid data:
 driver = webdriver.Chrome()
-driver.get('https://scouts-test.futbolkolektyw.pl/')
+driver.get('https://scouts.futbolkolektyw.pl/en/')
 driver.maximize_window()
 
 login = 'user10@getnada.com'
@@ -106,9 +106,9 @@ time.sleep(3)
 
 
 # Make screenshots from the site pages":
-links = ['https://scouts-test.futbolkolektyw.pl/', 'https://scouts-test.futbolkolektyw.pl/',
-'https://scouts-test.futbolkolektyw.pl/en/players/add', 'https://scouts-test.futbolkolektyw.pl/en/players',
-'https://scouts-test.futbolkolektyw.pl/en/players?lng=en&subpath=en&start=1&surname_contains=M%C5%82y%C5%84ski']
+links = ['https://scouts.futbolkolektyw.pl/', 'https://scouts.futbolkolektyw.pl/',
+'https://scouts.futbolkolektyw.pl/en/players/add', 'https://scouts.futbolkolektyw.pl/en/players',
+'https://scouts.futbolkolektyw.pl/en/players?lng=en&subpath=en&start=1&surname_contains=M%C5%82y%C5%84ski']
 for i in range(len(links)):
     driver.get(links[i])
     print(driver.title)

@@ -3,7 +3,7 @@ import time
 
 class Dashboard(BasePage):
     expected_title = 'Scouts panel'
-    dashboard_url = ('https://scouts-test.futbolkolektyw.pl/')
+    dashboard_url = ('https://scouts.futbolkolektyw.pl/en/')
     scounts_panel_header_xpath = "//h6[text()='Scouts Panel']"
     header_of_box = 'Scouts Panel'
     main_page_link_xpath = "//span[text()='Main page']"

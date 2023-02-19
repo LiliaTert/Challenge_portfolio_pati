@@ -19,7 +19,7 @@ class TestAddPlayerPage(unittest.TestCase):
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
         # self.driver_service = Service(executable_path=ChromeDriverManager().install())
         # self.driver = webdriver.Chrome(service=self.driver_service)
-        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
+        self.driver.get('https://scouts.futbolkolektyw.pl/en/')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
